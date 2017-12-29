@@ -9,9 +9,13 @@
 // 
 // ==/UserScript==
 
-let cardid = "1100077cc2c37966e94c6dc8e2bc6069c9bde7f13ee76";
+let cardid = "1100077cc2c37966e94c6dc8e2bc6069c9bde7f13ee76";//张
+//let cardid = "1100083734abb300badbfe3d77284e103a1b0492297db";//江
 
 $('.g-bd img').remove();
+$('#operLayer').remove();
+$('.site_guide').remove();
+$('.dm-bottom-wrap').remove();
 
 $(function(){
   // Select ID card
