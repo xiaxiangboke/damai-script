@@ -22,7 +22,7 @@ $('.m-calendar').remove();
 $('.m-choose-picker').remove();
 $('.m-goodstips').remove();
 $('.m-flowers').remove();
-  console.log('removed');
+console.log('removed');
 
 
 $(function(){
