@@ -1,11 +1,15 @@
 // ==UserScript==
-// @name Hider and Unhider for piao.damai.cn
-// @namespace Violentmonkey Scripts
+// @name         Hider and Unhider for piao.damai.cn
 // @version      0.1
-// @description  Buy ticket and search your wallet!
-// @match https://piao.damai.cn/*
-// @grant none
-// @require      http://192.168.1.230/jq/jquery-1.8.2.min.js
+// @description  大麦网票务详情页隐藏无关信息并取消隐藏各类选项
+// @author       Kagurazaka Kotori
+// @homepageURL  https://github.com/kagurazakakotori/damai-script
+// @downloadURL  https://raw.githubusercontent.com/kagurazakakotori/damai-script/master/Hider%20and%20Unhider%20for%20piao.damai.cn.user.js
+//
+// @namespace Violentmonkey Scripts
+// @match        https://piao.damai.cn/*
+// @grant        none
+// @require      https://cdn.bootcss.com/jquery/1.8.2/jquery.min.js
 // 
 // ==/UserScript==
 
@@ -31,19 +35,11 @@ $(function(){
   $('#cartList.m-cart').removeClass('f-dn');
   $('#cartList.m-cart').show();
   
-  // For the Afternoon show - 1280
-  $('[data-performid=9000160]>a').append('<div id="afternoon"></div>');
-  $('#afternoon').click();
-  $('ul.lst').removeClass('lst-dis');
-  $('[data-priceid=12013117]>a>span').click();
-  $('.ipt-num').val('4');
-  
-  // For test only
-  //$('[data-performid=9006781]>a').append('<div id="afternoon"></div>');
+  // Aqours Only
+  //$('[data-performid=9000160]>a').append('<div id="afternoon"></div>');
   //$('#afternoon').click();
   //$('ul.lst').removeClass('lst-dis');
-  //$('[data-priceid=12049418]>a>span').click();
+  //$('[data-priceid=12013117]>a>span').click();
   //$('.ipt-num').val('4');
-  
   console.log('Done');
 });

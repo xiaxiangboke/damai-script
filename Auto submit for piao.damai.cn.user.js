@@ -1,44 +1,21 @@
 // ==UserScript==
 // @name Auto submit for piao.damai.cn
-// @namespace Violentmonkey Scripts
 // @version      0.1
-// @description  Buy ticket and search your wallet!
+// @description  大麦网自动定时发送订票请求
+// @author       Kagurazaka Kotori
+// @homepageURL  https://github.com/kagurazakakotori/damai-script
+// @downloadURL  https://raw.githubusercontent.com/kagurazakakotori/damai-script/master/Auto%20submit%20for%20piao.damai.cn.user.js
+//
+// @namespace Violentmonkey Scripts
 // @match https://piao.damai.cn/*
 // @grant none
-// @require      http://192.168.1.230/jq/jquery-1.8.2.min.js
+// @require      https://cdn.bootcss.com/jquery/1.8.2/jquery.min.js
 // 
 // ==/UserScript==
 
-// Price ID begin
-let test137185 = '12049418';
-
-let test139316 = {
-  stu: '12084693',
-  back: '12084692',
-  front: '12084798'
-}
-
-let aqours = {
-  day1280: '12013117',
-  day1080: '12013118',
-  day880a: '12068613',
-  day880ext: '12089426',
-  day880: '12068621',
-  day680: '12013119',
-  day480: '12068614',
-  night1280: '12068634',
-  night1080: '12068635',
-  night880ext: '12089425',
-  night880: '12068639',
-  night880a: '12068637',
-  night680: '12068636',
-  night480: '12068638'
-}
-// Price ID end
-
-
-let num = '4';
-let proId = aqours.night1280;
+let num = '4';  //所购买门票数量
+let proId = '12068634';  //所购买门票之Price ID,F12可知
+let startTime = 1514545200000;  //开票时间
 
 console.log("Stalled:" + proId + "x" + num);
 
@@ -46,7 +23,6 @@ console.log("Stalled:" + proId + "x" + num);
 
 let companyId = '872'; // 872 for Shanghai
 
-let startTime = 1514545200000;
 if ($.now() < startTime) {
   // Get offset
   let serverTime = new Array();

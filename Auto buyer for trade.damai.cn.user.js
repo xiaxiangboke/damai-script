@@ -1,16 +1,19 @@
 // ==UserScript==
 // @name Auto buyer for trade.damai.cn
-// @namespace Violentmonkey Scripts
 // @version      0.1
-// @description  Buy ticket and search your wallet!
+// @description  大麦网自动填写订单信息（包括实名信息）
+// @author       Kagurazaka Kotori
+// @homepageURL  https://github.com/kagurazakakotori/damai-script
+// @downloadURL  https://raw.githubusercontent.com/kagurazakakotori/damai-script/master/Auto%20buyer%20for%20trade.damai.cn.user.js
+//
+// @namespace Violentmonkey Scripts
 // @match *://trade.damai.cn/*
 // @grant none
-// @require      http://192.168.1.230/jq/jquery-1.8.2.min.js
+// @require      https://cdn.bootcss.com/jquery/1.8.2/jquery.min.js
 // 
 // ==/UserScript==
 
-let cardid = "1100077cc2c37966e94c6dc8e2bc6069c9bde7f13ee76";//张
-//let cardid = "1100083734abb300badbfe3d77284e103a1b0492297db";//江
+let cardid = "1100077cc2c37966e94c6dc8e2bc6069c9bde7f13ee76";  //身份证45位字符串,F12审查元素可知
 
 $('.g-bd img').remove();
 $('#operLayer').remove();
@@ -27,7 +30,5 @@ $(function(){
   console.log('ID card selected');
   
   // Submit
-  //setTimeout(function(){
-    $('#orderConfirmSubmit').click();
-  //},20);
+  $('#orderConfirmSubmit').click();
 });
