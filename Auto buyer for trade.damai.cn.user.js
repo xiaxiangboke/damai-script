@@ -7,13 +7,13 @@
 // @downloadURL  https://raw.githubusercontent.com/kagurazakakotori/damai-script/master/Auto%20buyer%20for%20trade.damai.cn.user.js
 //
 // @namespace Violentmonkey Scripts
-// @match *://trade.damai.cn/*
+// @match *://buy.damai.cn/*
 // @grant none
 // @require      https://cdn.bootcss.com/jquery/1.8.2/jquery.min.js
 // 
 // ==/UserScript==
 
-let cardid = "1100077cc2c37966e94c6dc8e2bc6069c9bde7f13ee76";  //身份证45位字符串,F12审查元素可知
+let cardid = "110009f2a97184f19325f01bbf377492238e033f09222";  //身份证45位字符串,F12审查元素可知
 
 $('.g-bd img').remove();
 $('#operLayer').remove();
