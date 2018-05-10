@@ -13,9 +13,9 @@
 // 
 // ==/UserScript==
 
-let num = '4';  //所购买门票数量
-let proId = '12068634';  //所购买门票之Price ID,F12可知
-let startTime = 1514545200000;  //开票时间
+let num = '1';  //所购买门票数量
+let proId = '12276866';  //所购买门票之Price ID,F12可知
+let startTime = 1525923000000;  //开票时间
 
 console.log("Stalled:" + proId + "x" + num);
 
